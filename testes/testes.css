@@ -1,23 +1,87 @@
-.dropdown-content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  min-height: 100vh; /* Para a navbar ir até o final da página verticalmente */
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #333;
   color: #fff;
+  display: flex;
+  flex-direction: column; /* Alterado para exibir os itens verticalmente */
+  align-items: center; /* Centraliza os itens */
+  padding: 10px;
+  width: 60px; /* Tornando a navbar mais fina */
 }
 
-.dropdown-content a:hover {
+.navbar-logo {
+  font-size: 1.5rem;
+  margin-bottom: 20px; /* Espaçamento entre o logotipo e os itens de menu */
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin-bottom: 10px; /* Espaçamento entre os itens de menu */
+}
+
+.navbar-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Tamanho dos ícones */
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
   background-color: #fff;
-  color: #333;
+  margin: 3px 0;
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    width: 100%; /* Ocupa a largura total em telas menores */
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links li {
+    margin: 10px 0;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
 }

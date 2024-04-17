@@ -1,6 +1,6 @@
-const dropdownToggle = document.querySelector('#dropdown-toggle');
-const dropdownContent = document.querySelector('#dropdown-content');
+const toggleButton = document.querySelector('.navbar-toggle');
+const navbarLinks = document.querySelector('.navbar-links');
 
-dropdownToggle.addEventListener('click', () => {
-  dropdownContent.style.display = dropdownContent.style.display === 'none' ? 'block' : 'none';
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('show');
 });
