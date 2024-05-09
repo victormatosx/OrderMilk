@@ -238,6 +238,17 @@ button {
   z-index: 1;
   border-radius: calc(50 * var(--rpx));
 }
+.box-2 {
+  border: 1px solid #ffffff00; /* Adds a border to the button */
+  padding: 10px; /* Adds some space between the border and the content */
+  transition: background-color 0.3s ease; /* Adds a smooth transition when hovering */
+}
+
+.box-2:hover {
+  background-color: #ccc; /* Changes the background color when hovering */
+  cursor: pointer; /* Adds a pointer cursor when hovering */
+}
+
 .img-4 {
   position: absolute;
   width: calc(153 * var(--rpx));
@@ -276,6 +287,16 @@ button {
   z-index: 3;
   border-radius: calc(50 * var(--rpx));
 }
+.wrapper-2 {
+  border: 1px solid #ffffff00; /* Adds a border to the button */
+  padding: 10px; /* Adds some space between the border and the content */
+  transition: background-color 0.3s ease; /* Adds a smooth transition when hovering */
+}
+
+.wrapper-2:hover {
+  background-color: #ccc; /* Changes the background color when hovering */
+  cursor: pointer; /* Adds a pointer cursor when hovering */
+}
 .pic-9 {
   position: absolute;
   width: 30.04%;
@@ -313,6 +334,16 @@ button {
   background: #2a66b1;
   z-index: 2;
   border-radius: calc(50 * var(--rpx));
+}
+.wrapper-3 {
+  border: 1px solid #ffffff00; /* Adds a border to the button */
+  padding: 10px; /* Adds some space between the border and the content */
+  transition: background-color 0.3s ease; /* Adds a smooth transition when hovering */
+}
+
+.wrapper-3:hover {
+  background-color: #ccc; /* Changes the background color when hovering */
+  cursor: pointer; /* Adds a pointer cursor when hovering */
 }
 .pic-a {
   position: relative;
@@ -386,3 +417,12 @@ button {
   text-align: left;
   z-index: 7;
 }
+.pie-chart {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
