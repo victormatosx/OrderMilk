@@ -7,6 +7,7 @@
     <title>OrderMilk</title>
     <link rel="stylesheet" href="/rebanho-page/rebanho.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 
 <body>
@@ -99,10 +100,105 @@
         </div>
     </div>
 
+    <!--Conteudo-->
     <div class="home_content">
+        <div class="lista">
+            <br><br>
+            <h1>Rebanho</h1>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filtrar...">
+
+            <table id="myTable">
+            <tr class="header">
+                <th style="width:20%;">Código</th>
+                <th style="width:20%;">Nome</th>
+                <th style="width:20%;">Lote</th>
+                <th style="width:20%;">Idade</th>
+                <th style="width:20%;">Link</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Animal A</td>
+                <td>Vaca Seca</td>
+                <td>2 anos</td>
+                <td><a class="link" href="paginaA.html">Ver</a></td>
+            </tr>
+            <!-- Adicione mais linhas conforme necessário -->
+            </table>
+        </div>
 
     </div>
 
+    <!--sidebar-->
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
@@ -150,6 +246,28 @@
 
         settingsBtn.onclick = function() {
             sidebar.classList.toggle("active");
+        }
+    </script>
+
+    <!--Lista-->
+    <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2]; // Mudança aqui para filtrar pela coluna do lote
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }       
+          }
         }
     </script>
 

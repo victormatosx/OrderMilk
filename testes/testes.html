@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar</title>
-  <link rel="stylesheet" href="testes.css">
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+table, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
 
+th {text-align: left;}
+
+tr:hover {background-color: #f5f5f5;}
+</style>
 </head>
 <body>
-  <div id="chartdiv"></div>
-</body>
+
+<h2>Filtro de Animais</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Pesquisar por lotes..">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Código</th>
+    <th style="width:20%;">Nome</th>
+    <th style="width:20%;">Lote</th>
+    <th style="width:20%;">Idade</th>
+    <th style="width:20%;">Link</th>
+  </tr>
+  <tr>
+    <td>001</td>
+    <td>Animal A</td>
+    <td>Vaca Seca</td>
+    <td>2 anos</td>
+    <td><a href="paginaA.html">Visitar</a></td>
+  </tr>
+  <!-- Adicione mais linhas conforme necessário -->
+</table>
+
 <script>
-  am5.ready(function() {
-  
-  // Create root element
-  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-  var root = am5.Root.new("chartdiv");
-  
-  
-  // Set themes
-  // https://www.amcharts.com/docs/v5/concepts/themes/
-  root.setThemes([
-    am5themes_Animated.new(root)
-  ]);
-  
-  
-  // Create chart
-  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-  var chart = root.container.children.push(am5percent.PieChart.new(root, {
-    layout: root.verticalLayout
-  }));
-  
-  
-  // Create series
-  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
-  var series = chart.series.push(am5percent.PieSeries.new(root, {
-    valueField: "value",
-    categoryField: "category"
-  }));
-  
-  
-  // Set data
-  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
-  series.data.setAll([
-    { value: 85, category: "Prenhas" },
-    { value: 15, category: "Não prenhas" },
-  ]);
-  
-  
-  // Play initial series animation
-  // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
-  series.appear(1000, 100);
-  
-  }); // end am5.ready()
-  </script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2]; // Mudança aqui para filtrar pela coluna do lote
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
 </html>
