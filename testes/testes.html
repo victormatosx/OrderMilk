@@ -4,36 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navbar</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
   <link rel="stylesheet" href="testes.css">
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
 </head>
 <body>
-
-
-
-<div class="container">
-  <nav class="navbar">
-    <br><br>
-    <div class="navbar-logo"><img src="img/logo-mini.png" alt="" width="90" height="90"></div>
-    <div class="navbar-toggle">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="navbar-links">
-        <br>
-      <li><a href="#"><i class="fas fa-home"></i></a></li>
-      <br><br><br>
-      <li><a href="#"><i class="fas fa-user"></i></a></li>
-      <br><br><br>
-      <li><a href="#"><i class="fas fa-cogs"></i></a></li>
-      <br><br><br>
-      <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </ul>
-  </nav>
-</div>
-
-<script src="testes.js"></script>
+  <div id="chartdiv"></div>
 </body>
+<script>
+  am5.ready(function() {
+  
+  // Create root element
+  // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+  var root = am5.Root.new("chartdiv");
+  
+  
+  // Set themes
+  // https://www.amcharts.com/docs/v5/concepts/themes/
+  root.setThemes([
+    am5themes_Animated.new(root)
+  ]);
+  
+  
+  // Create chart
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
+  var chart = root.container.children.push(am5percent.PieChart.new(root, {
+    layout: root.verticalLayout
+  }));
+  
+  
+  // Create series
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
+  var series = chart.series.push(am5percent.PieSeries.new(root, {
+    valueField: "value",
+    categoryField: "category"
+  }));
+  
+  
+  // Set data
+  // https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Setting_data
+  series.data.setAll([
+    { value: 85, category: "Prenhas" },
+    { value: 15, category: "Não prenhas" },
+  ]);
+  
+  
+  // Play initial series animation
+  // https://www.amcharts.com/docs/v5/concepts/animations/#Animation_of_series
+  series.appear(1000, 100);
+  
+  }); // end am5.ready()
+  </script>
 </html>
