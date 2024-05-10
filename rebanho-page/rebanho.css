@@ -5,6 +5,10 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+.navbar-brand {
+    margin: 0 auto;
+    justify-content: center;
+}
 
 body{
     position: relative;
