@@ -5,11 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrderMilk</title>
-    <link rel="stylesheet" href="/home-page/home.css">
+    <link rel="stylesheet" href="/rebanho-page/rebanho.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 </head>
 
 <body>
@@ -102,38 +99,9 @@
         </div>
     </div>
 
-    
-
     <div class="home_content">
-        
-        <div class="main-container">
-
-        <span class="cadastrar-animal">Cadastrar Animal</span>
-        <span class="lactantes">Lactantes</span>
-        <span class="rebanho">Rebanho</span>
-
-        <button class="rectangle">
-            <div class="vector"></div>
-            <span class="span">232</span>
-        </button>
-
-        <button class="button">
-            <div class="vector-1"></div>
-        </button>
-
-        <button class="rectangle-2">
-            <div class="duck-icon"></div>
-            <span class="number-text">102</span>
-        </button>
-        </div>
-
-        <br><br><br><br><br><br>
-        
-        <div id="chartdiv"></div>
 
     </div>
-
-    
 
     <script>
         let btn = document.querySelector("#btn");
@@ -184,42 +152,7 @@
             sidebar.classList.toggle("active");
         }
     </script>
-    <script>
-        am5.ready(function() {
-        
 
-        var root = am5.Root.new("chartdiv");
-        
-
-        root.setThemes([
-          am5themes_Animated.new(root)
-        ]);
-        
-
-        var chart = root.container.children.push(am5percent.PieChart.new(root, {
-          layout: root.verticalLayout
-          
-        }));
-        
-        
-        var series = chart.series.push(am5percent.PieSeries.new(root, {
-          valueField: "value",
-          categoryField: "category"
-        }));
-        
-        
-        series.data.setAll([
-          { value: 10, category: "Vacas Secas" },
-          { value: 9, category: "Vacas Lactantes" },
-          { value: 6, category: "Pré-Parto" },
-          { value: 5, category: "Novilhas" },
-          { value: 4, category: "Bezerras" },
-        ]);
-        
-        });
-    </script>
-        
-    
 </body>
 
 </html>
