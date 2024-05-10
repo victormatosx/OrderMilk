@@ -5,6 +5,31 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+.home_content{
+    margin-top: 80px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Certifique-se de que o z-index seja alto o suficiente para garantir que a navbar esteja acima de outros elementos */
+    background-color: #2A66B1;
+
+}
+
+.navbar .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-brand img {
+    max-height: 50px; /* Ajuste conforme necessário */
+    margin-left: 45%;
+}
+
 .navbar-brand {
     margin: 0 auto;
     justify-content: center;
