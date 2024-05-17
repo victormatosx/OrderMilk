@@ -290,20 +290,33 @@ body{
     left: 240px;
 }
 
-
-
-
-
+-------------------------------------------------------------
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     margin: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
+header {
+    background-color: #2A66B1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #2A66B1;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
 main {
     flex: 1;
@@ -313,9 +326,9 @@ main {
 }
 
 .contact-form-container {
-    background: #ffffff;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(102, 102, 102, 0.2);
+    background: #f0f0f0;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     width: 100%;
     max-width: 500px;
@@ -324,38 +337,70 @@ main {
 
 .contact-form-container h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-    color: #a3a3a3;
+    font-size: 28px;
+    color: #2A66B1;
 }
 
 form label {
     display: block;
     margin-bottom: 8px;
     text-align: left;
+    font-weight: bold;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #b0bec5;
     border-radius: 5px;
     font-size: 16px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: none; /* Desabilita o redimensionamento */
+    height: 120px; /* Ajusta a altura para igualar aos outros campos */
 }
 
 form button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background-color: #2A66B1;
     border: none;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
+form button:hover {
+    background-color: #1f4c8d;
+}
+
 .response-message {
     margin-top: 20px;
     font-size: 16px;
+}
+
+.contact-form-container::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url('icon.png') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto 20px;
+}
+
+header::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url('logo.png') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
 }
