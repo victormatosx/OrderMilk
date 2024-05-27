@@ -526,3 +526,7 @@ hr{
     height: 300px;
     float: right;
   }
+
+  .onClick i{
+    color: white;
+  }
