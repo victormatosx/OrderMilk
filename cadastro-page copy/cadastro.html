@@ -1,11 +1,3 @@
-<?php
-    if(isset($_POST['submit']))
-    {
-        print_r($_POST['brinco']);
-        print_r($_POST['nomeAnimal']);
-        print_r($_POST['idade']);
-    }
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -113,7 +105,7 @@
 
         <br><br>
         <h1>Cadastrar Animal</h1>
-        <form id="cadastroForm" action="cadastro.php" method="POST">
+        <form id="cadastroForm" action="https://localhost/ordermilk/config.php" method="POST">
 
             <label for="brinco">Número do Brinco:</label>
             <input type="text" id="brinco" name="brinco"><br>
@@ -136,7 +128,14 @@
             <label for="mae">Crias:</label>
             <input type="text" id="crias" name="crias"><br>
 
-            <input type="submit" value="Cadastrar">
+            
+            <button class="btn1" type="submit" name="cadastrar" id="cadastrar">
+                Cadastrar
+            </button>
+            
+            <!--
+            <input type="submit" name="cadastrar">
+            -->
         </form>
 
 
