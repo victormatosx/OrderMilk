@@ -1,3 +1,11 @@
+<?php
+    if(isset($_POST['submit']))
+    {
+        print_r($_POST['brinco']);
+        print_r($_POST['nomeAnimal']);
+        print_r($_POST['idade']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,8 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrderMilk</title>
-    <link rel="stylesheet" href="/cadastro-page/cadastro.css">
-    <link rel="stylesheet" href="config.php">
+    <link rel="stylesheet" href="/cadastro-page copy/cadastro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
@@ -106,7 +113,8 @@
 
         <br><br>
         <h1>Cadastrar Animal</h1>
-        <form id="cadastroForm" action="cadastro.php">
+        <form id="cadastroForm" action="cadastro.php" method="POST">
+
             <label for="brinco">Número do Brinco:</label>
             <input type="text" id="brinco" name="brinco"><br>
 
@@ -129,10 +137,9 @@
             <input type="text" id="crias" name="crias"><br>
 
             <input type="submit" value="Cadastrar">
-            <br>
         </form>
 
-        <br><br><br>
+
 
     </div>
 
