@@ -13,7 +13,7 @@
     $host = 'localhost';
     $usuario = 'root';
     $pass = '';
-    $banco = 'ordermilk';
+    $banco = 'ordermik';
 
     $con = mysqli_connect($host, $usuario, $pass, $banco);
 
@@ -21,8 +21,7 @@
         die("Falha ao conectar ao banco de dados." . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO cadastro_animal (nº_brinco, nome, id_lote, idade, crias, pai, mae) 
-    VALUES('$brinco','$nome', '$idade', '$lote', '$pai', '$mae', '$crias')";
+    $sql = "INSERT INTO cadastro_animal (nº_brinco, nome, id_lote, idade, crias, pai, mae) VALUES('$brinco','$nome', '$idade', '$lote', '$pai', '$mae', '$crias')";
 
     $rs = mysqli_query($con, $sql);
 
