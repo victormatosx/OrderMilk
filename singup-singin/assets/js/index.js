@@ -13,3 +13,7 @@ if (localStorage.getItem("token") == null) {
     localStorage.removeItem("userLogado");
     window.location.href = "../singup-singin/assets/html/signin.html";
   }
+
+  
+
+  
