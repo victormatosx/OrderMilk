@@ -3,11 +3,11 @@
     if(isset($_POST['cadastrar'])){
         $brinco = $_POST['brinco'];
         $nome = $_POST['nomeAnimal'];
-        $idade = $_POST['idade'];
         $lote = $_POST['lote'];
+        $idade = $_POST['idade'];
+        $crias = $_POST['crias'];
         $pai = $_POST['pai'];
         $mae = $_POST['mae'];
-        $crias = $_POST['crias'];
     }
 
     $host = 'localhost';
@@ -21,7 +21,7 @@
         die("Falha ao conectar ao banco de dados." . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO cadastro_animal (nº_brinco, nome, id_lote, idade, crias, pai, mae) VALUES('$brinco','$nome', '$idade', '$lote', '$pai', '$mae', '$crias')";
+    $sql = "INSERT INTO cadastro_animal (nº_brinco, nome, lote, idade, crias, pai, mae) VALUES('$brinco', '$nome', '$lote', '$idade', '$crias', '$pai', '$mae')";
 
     $rs = mysqli_query($con, $sql);
 
