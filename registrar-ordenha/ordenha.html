@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ordenha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css-navbar-sidebar/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+</head>
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-light" style="background-color: #2A66B1;">
+        <div class="container justify-content-center">
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo.png" alt="" width="150" height="50" class="d-inline-block align-top">
+            </a>
+        </div>
+    </nav>
+
+    <!--sidebar-->
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <div class="logo_name">
+                    <img src="img/logo.png" alt="" width="150" height="50">
+                </div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+            <ul class="nav_list">
+                <li>
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Pesquisar...">
+                    <span class="tooltip">Pesquisar</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-user'></i>
+                        <span class="links_name">Usuário</span>
+                    </a>
+                    <span class="tooltip">Usuário</span>
+                </li>
+                <li>
+                    <a href="/contato-page/contato.html">
+                        <i class='bx bx-chat'></i>
+                        <span class="links_name">Contato</span>
+                    </a>
+                    <span class="tooltip">Contato</span>
+                </li>
+                <li>
+                    <a href="/produção-page/produção.html">
+                        <i class='bx bx-pie-chart-alt-2'></i>
+                        <span class="links_name">Produção</span>
+                    </a>
+                    <span class="tooltip">Produção</span>
+                </li>
+                <li>
+                    <a href="/rebanho-page/rebanho.html">
+                        <i class='bx bx-folder'></i>
+                        <span class="links_name">Rebanho</span>
+                    </a>
+                    <span class="tooltip">Rebanho</span>
+                </li>
+                <li>
+                    <a href="/rebanho-page/rebanho.html">
+                        <i class='bx bx-cart'></i>
+                        <span class="links_name">Lactantes</span>
+                    </a>
+                    <span class="tooltip">Lactantes</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-heart'></i>
+                        <span class="links_name">Saúde</span>
+                    </a>
+                    <span class="tooltip">Saúde</span>
+                </li>
+                <li>
+                    <a href="/config-page/config.html">
+                        <i class='bx bx-cog'></i>
+                        <span class="links_name">Configurações</span>
+                    </a>
+                    <span class="tooltip">Configurações</span>
+                </li>
+            </ul>
+            <div class="profile_content">
+                <div class="profile">
+                    <div class="profile_details">
+                        <img src="/home-page/img/user.jpg" alt="">
+                        <div class="name_job">
+                            <div class="name">Victor Matos</div>
+                            <div class="job">Produtor</div>
+                        </div>
+                    </div>
+                    <button class="onClick" onclick="alerta()">
+                    <i class='bx bx-log-out' id="log_out"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home_content">
+        <div class="container2">
+            <header>
+                <h1>Registro de Ordenha</h1>
+            </header>
+            <form>
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                </div>
+                <div class="form-group">
+                    <label for="ordenha">Escolha a ordenha do dia:</label>
+                    <select id="ordenha" name="ordenha" required>
+                        <option value="1">1ª Ordenha</option>
+                        <option value="2">2ª Ordenha</option>
+                        <option value="3">3ª Ordenha</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="litros">Litros:</label>
+                    <input type="number" id="litros" name="litros" min="0" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="vacas">Número de vacas ordenhadas:</label>
+                    <input type="number" id="vacas" name="vacas" min="0" required>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+        let searchBtn = document.querySelector(".bx-search");
+        let userBtn = document.querySelector(".bx-user");
+        let messagesBtn = document.querySelector(".bx-chat");
+        let analyticsBtn = document.querySelector(".bx-pie-chart-alt-2");
+        let filemanagerBtn = document.querySelector(".bx-folder");
+        let orderBtn = document.querySelector(".bx-cart");
+        let savedBtn = document.querySelector(".bx-heart");
+        let settingsBtn = document.querySelector(".bx-cog");
+        
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    
+        searchBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        userBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        messagesBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        analyticsBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        filemanagerBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        orderBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+        
+        savedBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+
+        settingsBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
