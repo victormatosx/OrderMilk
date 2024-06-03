@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrderMilk</title>
-    <link rel="stylesheet" href="/cadastro-page/cadastro.css">
-    <link rel="stylesheet" href="config.php">
+    <link rel="stylesheet" href="/css-navbar-sidebar/style.css">
+    <link rel="stylesheet" href="/cadastro-page copy/cadastro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
@@ -100,24 +100,28 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
     <div class="home_content">
 
         <br><br>
         <h1>Cadastrar Animal</h1>
-        <form id="cadastroForm" action="cadastro.php">
+        <form id="cadastrar" name="cadastrar" action="https://localhost/ordermilk1/config_animal.php" method="POST">
+
             <label for="brinco">Número do Brinco:</label>
             <input type="text" id="brinco" name="brinco"><br>
 
             <label for="nomeAnimal">Nome do Animal:</label>
             <input type="text" id="nomeAnimal" name="nomeAnimal"><br>
 
-            <label for="idade">Idade:</label>
-            <input type="number" id="idade" name="idade"><br>
-
             <label for="lote">Lote:</label>
             <input type="text" id="lote" name="lote"><br>
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade"><br>
+
+            <label for="mae">Crias:</label>
+            <input type="text" id="crias" name="crias"><br><br>
 
             <label for="pai">Pai:</label>
             <input type="text" id="pai" name="pai"><br>
@@ -125,14 +129,15 @@
             <label for="mae">Mãe:</label>
             <input type="text" id="mae" name="mae"><br>
 
-            <label for="mae">Crias:</label>
-            <input type="text" id="crias" name="crias"><br>
-
-            <input type="submit" value="Cadastrar">
-            <br>
+            <button class="btn1" type="submit" name="cadastrar" id="cadastrarbtn">
+                Cadastrar
+            </button>
+            
+            
+            
         </form>
-
-        <br><br><br>
+        <br><br>
+        
 
     </div>
 
