@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrderMilk</title>
+    <title>Outra Página</title>
     <link rel="stylesheet" href="/navbar-sidebar/css-navbar-sidebar/style.css">
-    <link rel="stylesheet" href="contato.css">
+    <link rel="stylesheet" href="/home-page/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-</head>
 
+</head>
 <body>
-    <!--navbar-->
+    <div id="minha-div">
+            <!--navbar-->
     <nav class="navbar navbar-light" style="background-color: #2A66B1;">
         <div class="container justify-content-center">
-            <a class="navbar-brand" href="/home-page/home.html">
+            <a class="navbar-brand" href="home.html">
                 <img src="img/logo.png" alt="" width="150" height="50" class="d-inline-block align-top">
             </a>
         </div>
@@ -46,7 +47,7 @@
                     <span class="tooltip">Usuário</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/contato-page/contato.html">
                         <i class='bx bx-chat'></i>
                         <span class="links_name">Contato</span>
                     </a>
@@ -81,7 +82,7 @@
                     <span class="tooltip">Saúde</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/config-page/config.html">
                         <i class='bx bx-cog'></i>
                         <span class="links_name">Configurações</span>
                     </a>
@@ -97,39 +98,13 @@
                             <div class="job">Produtor</div>
                         </div>
                     </div>
+                    <button class="onClick" onclick="alerta()">
                     <i class='bx bx-log-out' id="log_out"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-
-    
-
-    <div class="home_content">
-        
-        <main>
-            <div class="contact-form-container">
-                <h2>Contato</h2>
-                <form id="contactForm">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-    
-                    <label for="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-    
-                    <button type="submit">Enviar</button>
-                </form>
-                <div id="responseMessage" class="response-message"></div>
-            </div>
-        </main>
-
-    </div>
-
-    
-    <!--navbar-->
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
@@ -179,31 +154,6 @@
             sidebar.classList.toggle("active");
         }
     </script>
-    <!--content-->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-
-    if (name && email && message) {
-        // Simulação do envio de dados para o servidor
-        document.getElementById('responseMessage').innerText = 'Mensagem enviada com sucesso!';
-        document.getElementById('responseMessage').style.color = 'green';
-        
-        // Limpar o formulário
-        document.getElementById('contactForm').reset();
-    } else {
-        document.getElementById('responseMessage').innerText = 'Por favor, preencha todos os campos.';
-        document.getElementById('responseMessage').style.color = 'red';
-    }
-});
-
-
-
-    </script>
-    
+    </div>
 </body>
 </html>
