@@ -1,72 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outra Página</title>
-    <link rel="stylesheet" href="/navbar-sidebar/css-navbar-sidebar/style.css">
-    <link rel="stylesheet" href="/home-page/home.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-    <script>
 
-        function initializeSidebar() {
-            let btn = document.querySelector("#btn");
-            let sidebar = document.querySelector(".sidebar");
-            let searchBtn = document.querySelector(".bx-search");
-            let userBtn = document.querySelector(".bx-user");
-            let messagesBtn = document.querySelector(".bx-chat");
-            let analyticsBtn = document.querySelector(".bx-pie-chart-alt-2");
-            let filemanagerBtn = document.querySelector(".bx-folder");
-            let orderBtn = document.querySelector(".bx-cart");
-            let savedBtn = document.querySelector(".bx-heart");
-            let settingsBtn = document.querySelector(".bx-cog");
-
-            btn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            searchBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            userBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            messagesBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            analyticsBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            filemanagerBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            orderBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            savedBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-
-            settingsBtn.onclick = function() {
-                sidebar.classList.toggle("active");
-            }
-        }
-    </script>
-
-</head>
-<body>
-    <div id="minha-div">
-            <!--navbar-->
+    <!--navbar-->
     <nav class="navbar navbar-light" style="background-color: #2A66B1;">
         <div class="container justify-content-center">
             <a class="navbar-brand" href="home.html">
@@ -156,6 +95,7 @@
             </div>
         </div>
     </div>
+
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
@@ -205,6 +145,4 @@
             sidebar.classList.toggle("active");
         }
     </script>
-    </div>
-</body>
-</html>
+
