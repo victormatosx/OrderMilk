@@ -11,6 +11,57 @@
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script>
+
+        function initializeSidebar() {
+            let btn = document.querySelector("#btn");
+            let sidebar = document.querySelector(".sidebar");
+            let searchBtn = document.querySelector(".bx-search");
+            let userBtn = document.querySelector(".bx-user");
+            let messagesBtn = document.querySelector(".bx-chat");
+            let analyticsBtn = document.querySelector(".bx-pie-chart-alt-2");
+            let filemanagerBtn = document.querySelector(".bx-folder");
+            let orderBtn = document.querySelector(".bx-cart");
+            let savedBtn = document.querySelector(".bx-heart");
+            let settingsBtn = document.querySelector(".bx-cog");
+
+            btn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            searchBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            userBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            messagesBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            analyticsBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            filemanagerBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            orderBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            savedBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+
+            settingsBtn.onclick = function() {
+                sidebar.classList.toggle("active");
+            }
+        }
+    </script>
 
 </head>
 <body>
