@@ -1,4 +1,5 @@
 body {
+    display: flex;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #d6d6d6; 
     justify-content: center;
@@ -65,4 +66,10 @@ body {
     border-color: #140268;
     box-shadow: 0 0 5px rgba(2, 10, 131, 0.2);
     outline: none;
+}
+
+.login-container a{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
 }

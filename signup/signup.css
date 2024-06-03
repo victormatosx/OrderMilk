@@ -1,11 +1,12 @@
 body {
+    display: flex;
     font-family: Arial, sans-serif;
     background-color: #ebebeb;
     margin: 0;
     padding: 0;
     justify-content: center;
     align-items: center;
-    height: 140vh;
+    height: 100vh;
 }
 
 .form-container {
