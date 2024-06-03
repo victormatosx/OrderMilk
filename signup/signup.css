@@ -6,7 +6,7 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 50px;
     overflow: auto;
 }
 
