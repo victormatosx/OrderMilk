@@ -105,20 +105,24 @@
         <main>
             <div class="contact-form-container">
                 <h2>Contato</h2>
+
                 <form id="contactForm" name="cadastrar" action="https://localhost/ordermilk1/config_contato.php" method="POST">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-    
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="name" name="nome" required>
+                
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-    
+                
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-    
+                
                     <button class="btn1" type="submit" name="cadastrar" id="cadastrarbtn">
                         Cadastrar
                     </button>
+                    <p id="responseMessage"></p>
                 </form>
+                
                 
             </div>
         </main>
@@ -176,30 +180,24 @@
             sidebar.classList.toggle("active");
         }
     </script>
+    
     <!--content-->
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
 
-    if (name && email && message) {
-        // Simulação do envio de dados para o servidor
-        document.getElementById('responseMessage').innerText = 'Mensagem enviada com sucesso!';
-        document.getElementById('responseMessage').style.color = 'green';
-        
-        // Limpar o formulário
-        document.getElementById('contactForm').reset();
-    } else {
-        document.getElementById('responseMessage').innerText = 'Por favor, preencha todos os campos.';
-        document.getElementById('responseMessage').style.color = 'red';
-    }
-});
-
-
-
+            if (name && email && mensagem) {
+                // Permitir o envio do formulário
+                document.getElementById('responseMessage').innerText = 'Mensagem enviada com sucesso!';
+                document.getElementById('responseMessage').style.color = 'green';
+            } else {
+                event.preventDefault();  // Impede o envio do formulário
+                document.getElementById('responseMessage').innerText = 'Por favor, preencha todos os campos.';
+                document.getElementById('responseMessage').style.color = 'red';
+            }
+        });
     </script>
     
 </body>

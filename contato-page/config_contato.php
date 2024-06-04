@@ -22,7 +22,7 @@
     $rs = mysqli_query($con, $sql);
 
     if($rs){
-        echo "Usuário cadastrado com sucesso.";
+        echo "Mensagem enviada com sucesso.";
     }
 
 ?>
