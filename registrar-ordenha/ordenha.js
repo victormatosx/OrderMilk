@@ -1,18 +1,20 @@
-document.getElementById('ordenhaForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão do formulário
+document.getElementById('ordenhaForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    // Obtém os valores do formulário
-    var data = document.getElementById('data').value;
-    var ordenha = document.getElementById('ordenha').value;
-    var litros = document.getElementById('litros').value;
-    var vacas = document.getElementById('vacas').value;
+    // Obtendo valores dos campos do formulário
+    const data = document.getElementById('data').value;
+    const ordenha = document.getElementById('ordenha').value;
+    const litros = document.getElementById('litros').value;
+    const vacas = document.getElementById('vacas').value;
 
-    // Armazena os valores no localStorage
-    localStorage.setItem('data', data);
-    localStorage.setItem('ordenha', ordenha);
-    localStorage.setItem('litros', litros);
-    localStorage.setItem('vacas', vacas);
+    // Exibindo resultado
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<p><strong>Registro de Ordenha:</strong></p>
+                           <p>Data: ${data}</p>
+                           <p>Ordenha: ${ordenha}ª</p>
+                           <p>Litros: ${litros}</p>
+                           <p>Número de Vacas Ordenhadas: ${vacas}</p>`;
 
-    // Redireciona para a página que mostra os dados
- 
+    // Opcional: Limpar formulário após submissão
+    document.getElementById('ordenhaForm').reset();
 });

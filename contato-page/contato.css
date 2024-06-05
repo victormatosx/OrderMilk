@@ -42,10 +42,12 @@ main {
 }
 
 .contact-form-container h2 {
+    margin-top: 0;
     margin-bottom: 20px;
     font-size: 28px;
     color: #2A66B1;
 }
+
 
 form label {
     display: block;
