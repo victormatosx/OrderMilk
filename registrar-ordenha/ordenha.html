@@ -103,7 +103,7 @@
         <br>
         <div class="container2">
             <h1>Registro de Ordenha</h1>
-            <form id="ordenhaForm">
+            <form id="ordenhaForm" name="cadastrar" action="https://localhost/ordermilk1/config_ordenha.php" method="POST">
                 <div class="form-group">
                     <label for="data">Data:</label>
                     <input type="date" id="data" name="data" required>
@@ -124,7 +124,7 @@
                     <label for="vacas">Número de Vacas Ordenhadas:</label>
                     <input type="number" id="vacas" name="vacas" min="0" required>
                 </div>
-                <button type="submit">Registrar</button>
+                <button type="submit" name="cadastrar">Registrar</button>
             </form>
             <div id="resultado"></div>
         </div>
@@ -179,7 +179,6 @@
             sidebar.classList.toggle("active");
         }
     </script>
-    <script src="./ordenha.js"></script>
-    <script src="../producao-page/produção.js"></script>
+
 </body>
 </html>
