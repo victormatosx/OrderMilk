@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "teste";
+$dbname = "ordermik";
 
 // Criar conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $conn->real_escape_string($password);
 
     // Consulta ao banco de dados
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
+    $sql = "SELECT * FROM cadastro_user WHERE email = '$email' AND senha = '$password'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
