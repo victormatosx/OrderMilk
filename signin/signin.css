@@ -46,12 +46,8 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     color: #333;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KPHBhdGggZD0iTTE2IDRjMCAuNi0uNCAxLjEtMSAxLjVMNSA5LjcgMCA5bDEtN2guNWMuNiAwIDEuMS0uNCAxLjUtMSAwLTEuNiAxLjQtMi43IDIuOC0yLjhMMTcgNHptLTMgMTV2LTRINXZ0NGgtMmE0IDQgMCAwIDAgMCA4aDE2YTYgNiAwIDAgMCAwLTEyeiIgZmlsbD0iIzZkNmQ2ZCIvPjwvc3ZnPg==') 10px center no-repeat;
 }
 
-.login-container input[type="password"] {
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDE4IDE4Ij4KPHBhdGggZD0iTTE2IDE0djZoLTFjMC0xLjctMS4zLTMtMy0zLTEuNyAwLTMgMS4zLTMgM0g2YzAtMS43LTEuMy0zLTMtM3MtMyAxLjMtMyAzSDNjMC0xLjcgMS4zLTMgMy0zdi02YTQgNCAwIDAgMSA0LTRjMS4xIDAgMi4xLjUgMi43IDEuM1YxYTYgNiAwIDAgMCAzIDBWMTJhNiA2IDAgMCAxLTYgNnYtNnptLTMgNHYzSDZ2LTNoNHoiIGZpbGw9IiM2ZDZkNmQiLz48L3N2Zz4=') 10px center no-repeat;
-}
 
 .login-container button {
     width: 100%;
