@@ -99,7 +99,7 @@ button:hover {
 }
 
 input:focus {
-    border-color: #140268;
-    box-shadow: 0 0 5px rgba(2, 10, 131, 0.2);
+    border-color: #a5a5a5;
+    box-shadow: 0 0 5px rgb(141, 141, 141);
     outline: none;
 }
