@@ -1,3 +1,13 @@
+<?php
+
+    include("conexao.php");
+
+    $consulta = "SELECT * FROM cadastro_animal";
+
+    $con = $mysqli->query($consulta) or die($mysqli->error);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,8 +15,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OrderMilk</title>
-    <link rel="stylesheet" href="/navbar-sidebar/css-navbar-sidebar/style.css">
-    <link rel="stylesheet" href="/rebanho-page/rebanho.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rebanho.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
@@ -111,106 +121,17 @@
                 <th style="width:20%;">Idade</th>
                 <th style="width:20%;">Link</th>
             </tr>
+
+            <?php while($dado = $con->fetch_array()){ ?>
             <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Pré-Parto</td>
-                <td>2 anos</td>
+                <td> <?php echo $dado["nº_brinco"]; ?> </td>
+                <td> <?php echo $dado["nome"]; ?> </td>
+                <td> <?php echo $dado["lote"]; ?> </td>
+                <td> <?php echo $dado["idade"]; ?> </td>
                 <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
             </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Pré-Parto</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Vaca Seca</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Vaca Seca</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Novilha</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Novilha</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Novilha</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Lactante</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Lactante</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Vaca Seca</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Vaca Seca</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>002</td>
-                <td>Animal B</td>
-                <td>Novilha</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Bezerra</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Animal A</td>
-                <td>Bezerra</td>
-                <td>2 anos</td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
-            </tr>
-            
-            <!-- Adicione mais linhas conforme necessário -->
+            <?php }?>
+
             </table>
         </div>
 
