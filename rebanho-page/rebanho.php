@@ -50,28 +50,28 @@
                     <span class="tooltip">Usuário</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/contato-page/contato.html">
                         <i class='bx bx-chat'></i>
                         <span class="links_name">Contato</span>
                     </a>
                     <span class="tooltip">Contato</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/producao-page/producao.html">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="links_name">Produção</span>
                     </a>
                     <span class="tooltip">Produção</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://localhost/ordermilk1/rebanho/rebanho.php">
                         <i class='bx bx-folder'></i>
                         <span class="links_name">Rebanho</span>
                     </a>
                     <span class="tooltip">Rebanho</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://localhost/ordermilk1/rebanho/rebanho.php">
                         <i class='bx bx-cart'></i>
                         <span class="links_name">Lactantes</span>
                     </a>
@@ -85,7 +85,7 @@
                     <span class="tooltip">Saúde</span>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/config-page/config.html">
                         <i class='bx bx-cog'></i>
                         <span class="links_name">Configurações</span>
                     </a>
