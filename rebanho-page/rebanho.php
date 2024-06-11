@@ -71,7 +71,7 @@
                     <span class="tooltip">Rebanho</span>
                 </li>
                 <li>
-                <a href="/registrar-ordenha/ordenha.html">
+                <a href="http://127.0.0.1:5501/registrar-ordenha/ordenha.html">
                         <i class='bx bx-cart'></i>
                         <span class="links_name">Registrar Ordenha</span>
                     </a>
@@ -130,7 +130,7 @@
                 <td> <?php echo $dado["nome"]; ?> </td>
                 <td> <?php echo $dado["lote"]; ?> </td>
                 <td> <?php echo $dado["idade"]; ?> </td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
+                <td><a class="link" href="http://127.0.0.1:5501/perfil/perfil.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
             </tr>
             <?php }?>
 

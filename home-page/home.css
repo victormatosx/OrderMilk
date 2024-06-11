@@ -28,9 +28,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   position: absolute;
-  height: calc(70 * var(--rpx));
+  height: calc(60 * var(--rpx));
   top: calc(34 * var(--rpx));
-  left: calc(901 * var(--rpx));
+  left: calc(810 * var(--rpx));
   color: rgba(0, 0, 0, 0.4);
   font-family: Inter, var(--default-font-family);
   font-size: calc(45 * var(--rpx));
@@ -197,8 +197,8 @@
   position: absolute;
   width: 30.04%;
   height: 63.64%;
-  top: 24.51%;
-  left: 52.99%;
+  top: 33.51%;
+  left: 36%;
   background: url(./assets/images/7f9a3730-036b-419f-a277-a4a22121b997.png)
     no-repeat center;
   background-size: 100% 100%;
