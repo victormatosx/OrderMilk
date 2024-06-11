@@ -26,7 +26,8 @@
     $rs = mysqli_query($con, $sql);
 
     if($rs){
-        echo "Usuário cadastrado com sucesso.";
+        header("Location: https://localhost/ordermilk1/rebanho/rebanho.php");
+        exit();
     }
 
 ?>
