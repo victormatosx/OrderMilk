@@ -18,7 +18,7 @@
     <!--navbar-->
     <nav class="navbar navbar-light" style="background-color: #2A66B1;">
         <div class="container justify-content-center">
-            <a class="navbar-brand" href="/home-page/home.html">
+            <a class="navbar-brand" href="http://127.0.0.1:5501/home-page/home.html">
                 <img src="img/logo.png" alt="" width="150" height="50" class="d-inline-block align-top">
             </a>
         </div>
@@ -63,11 +63,11 @@
                     <span class="tooltip">Rebanho</span>
                 </li>
                 <li>
-                    <a href="https://localhost/ordermilk1/rebanho/rebanho.php">
+                    <a href="/registrar-ordenha/ordenha.html">
                         <i class='bx bx-cart'></i>
-                        <span class="links_name">Lactantes</span>
+                        <span class="links_name">Registrar Ordenha</span>
                     </a>
-                    <span class="tooltip">Lactantes</span>
+                    <span class="tooltip">Registrar Ordenha</span>
                 </li>
                 <li>
                     <a href="#">
@@ -93,7 +93,9 @@
                             <div class="job">Produtor</div>
                         </div>
                     </div>
+                    <button class="onClick" onclick="alerta()">
                     <i class='bx bx-log-out' id="log_out"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -185,6 +187,8 @@
 
         <script src="./produção.js"></script>
         <script src="../registrar-ordenha/ordenha.js"></script>
+        <script src="../home-page/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
     
 </body>
 

@@ -26,7 +26,7 @@
     <!--navbar-->
     <nav class="navbar navbar-light" style="background-color: #2A66B1;">
         <div class="container justify-content-center">
-            <a class="navbar-brand" href="/home-page/home.html">
+            <a class="navbar-brand" href="http://127.0.0.1:5501/home-page/home.html">
                 <img src="img/logo.png" alt="" width="150" height="50" class="d-inline-block align-top">
             </a>
         </div>
@@ -50,14 +50,14 @@
                     <span class="tooltip">Usuário</span>
                 </li>
                 <li>
-                    <a href="/contato-page/contato.html">
+                    <a href="http://127.0.0.1:5501/contato-page/contato.html">
                         <i class='bx bx-chat'></i>
                         <span class="links_name">Contato</span>
                     </a>
                     <span class="tooltip">Contato</span>
                 </li>
                 <li>
-                    <a href="/producao-page/producao.html">
+                    <a href="http://127.0.0.1:5501/producao-page/produ%C3%A7%C3%A3o.html">
                         <i class='bx bx-pie-chart-alt-2'></i>
                         <span class="links_name">Produção</span>
                     </a>
@@ -71,11 +71,11 @@
                     <span class="tooltip">Rebanho</span>
                 </li>
                 <li>
-                    <a href="https://localhost/ordermilk1/rebanho/rebanho.php">
+                <a href="http://127.0.0.1:5501/registrar-ordenha/ordenha.html">
                         <i class='bx bx-cart'></i>
-                        <span class="links_name">Lactantes</span>
+                        <span class="links_name">Registrar Ordenha</span>
                     </a>
-                    <span class="tooltip">Lactantes</span>
+                    <span class="tooltip">Registrar Ordenha</span>
                 </li>
                 <li>
                     <a href="#">
@@ -85,7 +85,7 @@
                     <span class="tooltip">Saúde</span>
                 </li>
                 <li>
-                    <a href="/config-page/config.html">
+                    <a href="http://127.0.0.1:5501/config-page/config.html">
                         <i class='bx bx-cog'></i>
                         <span class="links_name">Configurações</span>
                     </a>
@@ -101,7 +101,9 @@
                             <div class="job">Produtor</div>
                         </div>
                     </div>
+                    <button class="onClick" onclick="alerta()">
                     <i class='bx bx-log-out' id="log_out"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -128,7 +130,7 @@
                 <td> <?php echo $dado["nome"]; ?> </td>
                 <td> <?php echo $dado["lote"]; ?> </td>
                 <td> <?php echo $dado["idade"]; ?> </td>
-                <td><a class="link" href="paginaA.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
+                <td><a class="link" href="http://127.0.0.1:5501/perfil/perfil.html"><img src="img/lupa.png" width="20px" height="20px"></a></td>
             </tr>
             <?php }?>
 
@@ -213,6 +215,32 @@
             }
         }
     </script>
+    <script >
+function alerta(){
+  Swal.fire({
+      title: "Você deseja sair?",
+      text: "Você não poderá reverter isto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sim, quero sair!",
+      cancelButtonText: "Cancelar"
+  }).then((result) => {
+      if (result.isConfirmed) {
+          Swal.fire({
+              title: "Saindo!",
+              text: "Sessão Finalizada.",
+              icon: "success"
+          }).then(() => {
+              // Redirecionar para o script de logout quando o usuário confirmar o logout
+              window.location.href = 'https://localhost/ordermilk1/logout.php';
+          });
+      }
+  });
+}
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

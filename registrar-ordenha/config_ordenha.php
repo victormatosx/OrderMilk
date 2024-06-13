@@ -23,7 +23,7 @@
     $rs = mysqli_query($con, $sql);
 
     if($rs){
-        echo "Ordenha cadastrado com sucesso.";
+        header("Location: http://127.0.0.1:5501/registrar-ordenha/ordenha.html");
     }
 
 ?>

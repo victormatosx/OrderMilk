@@ -251,10 +251,15 @@ body{
     font-size: 12px;
 }
 
+#log_out{
+    color: #ffff;
+    cursor: pointer;
+}
+
 .profile #log_out{
     position: absolute;
     left: 50%;
-    bottom: 5px;
+    bottom: 40px;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;

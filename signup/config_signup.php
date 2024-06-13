@@ -26,7 +26,8 @@
     $rs = mysqli_query($con, $sql);
 
     if($rs){
-        echo "Usuário cadastrado com sucesso.";
+          header("Location: http://127.0.0.1:5501/signin/signin.html");
+        exit();
     }
 
 ?>
