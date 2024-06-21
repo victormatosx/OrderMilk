@@ -42,7 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         // Login falhou
-        echo "Email ou senha incorretos.";
+        header("Location: http://127.0.0.1:5501/signin/signin.html");
+        exit();
     }
 }
 
