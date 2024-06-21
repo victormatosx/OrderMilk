@@ -54,7 +54,7 @@ input:focus, select:focus {
     box-shadow: 0 0 5px rgba(116, 235, 213, 0.5);
 }
 
-button {
+.registrar {
     width: 100%;
     padding: 10px 15px;
     background-color: #2A66B1;
@@ -66,7 +66,7 @@ button {
     transition: background-color 0.3s;
 }
 
-button:hover {
+.registrar:hover {
     background-color: #4276b6;
 }
 
